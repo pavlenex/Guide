@@ -3,7 +3,7 @@ layout: guide
 title: Onboarding
 description: An overview of some of the concepts to consider when building onboarding experiences.
 has_children: true
-nav_order: 3
+nav_order: 4
 permalink: /guide/onboarding/introduction/
 main_classes: -no-top-padding
 image: https://bitcoin.design/assets/images/guide/onboarding/onboarding-preview.png
@@ -22,7 +22,7 @@ scan this page to get an overview of the section and then decide which topics to
    image = "/assets/images/guide/onboarding/onboarding.png"
    retina = "/assets/images/guide/onboarding/onboarding@2x.png"
    mobile = "/assets/images/guide/onboarding/onboarding-mobile.png"
-   mobileRetina = "/assets/images/guide/onboarding/onboarding/onboarding-mobile@2x.png"
+   mobileRetina = "/assets/images/guide/onboarding/onboarding-mobile@2x.png"
    alt-text = "Person climbing ladder"
    width = 1600
    height = 600
@@ -49,14 +49,30 @@ This section will give you some tips on how best to understand and develop knowl
 
 ---
 
-### First-time user experience (coming soon)
+### [Creating a new wallet]({{ '/guide/onboarding/creating-a-new-wallet/' | relative_url }})
 
-An overview of how to design a successful onboarding experience for first-time users. This will help set the basis for a more advanced type of user.
+An overview of what information to include when creating a wallet for the first time.
 
-### Creating a wallet (coming soon)
+---
 
-### Funding a wallet (coming soon)
+### [Backing up a recovery phrase]({{ 'guide/onboarding/backing-up-a-recovery-phrase' | relative_url }})
 
-### Restoring a wallet (coming soon)
+An overview of the tradeoffs between using [manual backup]({{ 'guide/onboarding/backing-up-a-recovery-phrase/manual-backup' | relative_url }}) vs [automatic cloud backup]({{ 'guide/onboarding/backing-up-a-recovery-phrase/automatic-cloud-backup' | relative_url }}).
 
-### Protecting a wallet (coming soon)
+---
+
+### [Restoring a wallet]({{ 'guide/onboarding/restoring-a-wallet' | relative_url }})
+
+What options to consider if a user has lost their device, had it stolen or deleted and redownloaded a particular wallet application.
+
+---
+
+### [Protecting a wallet]({{ 'guide/onboarding/protecting-a-wallet' | relative_url }})
+
+An overview of how to add extra layers of securtiy to protect sensitive user data.
+
+---
+
+### [Funding a wallet]({{ 'guide/onboarding/funding-a-wallet' | relative_url }})
+
+An overview of how users are likely to fund their wallets

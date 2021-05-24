@@ -21,7 +21,7 @@ The key principles of designing for Bitcoin
    image = "/assets/images/guide/foundations/principles/principles.jpg"
    retina = "/assets/images/guide/foundations/principles/principles@2x.jpg"
    mobile = "/assets/images/guide/foundations/principles/principles-mobile.jpg"
-   mobileRetina = "/assets/images/foundations/principles/principles-mobile@2x.jpg"
+   mobileRetina = "/assets/images/guide/foundations/principles/principles-mobile@2x.jpg"
    alt-text = "Principles header illustration, five white circles in a horizontal line on black background"
    width = 1600
    height = 600
@@ -34,7 +34,9 @@ As a new technology, Bitcoin offers the opportunity of a decentralized open fina
 
 These are principles we in the Bitcoin Design Community identified and stand behind. Some of these come from the technology itself and others from the community's behavior and ethos. Although every use case and product is different, applications should strive to follow these principles. Diverging from them should only be done with very good reason.
 
+---
 
+<div class="glossary-toc" markdown="1">
 - [Self-custody](#self-custody)
 - [Security](#security)
 - [Inclusion](#inclusion)
@@ -42,6 +44,7 @@ These are principles we in the Bitcoin Design Community identified and stand beh
 - [Transparency](#transparency)
 - [Privacy](#privacy)
 - [Decentralization](#decentralization)
+</div>
 
 ---
 
