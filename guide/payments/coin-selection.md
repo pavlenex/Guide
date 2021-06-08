@@ -24,8 +24,8 @@ main_classes: -no-top-padding
 Coin selection is the process of choosing which [UTXOs](https://bitcoin.design/guide/glossary/#unspent-transaction-output-utxo) (or “coins”) to fund a Bitcoin transaction with (inputs[^1]) when making an on-chain payment. Since a wallet contains multiple coins to arrive at a balance, these are retrieved by an algorithm to fulfill the payment amount for outgoing transactions.
 
 There are two types of coin selection strategies that are used in Bitcoin applications:
-1. **Automatic Coin Selection** (wallet is delegated to control coin selection on behalf of user)
-2. **Manual Coin Selection** (user controls coin selection)
+1. [**Automatic Coin Selection**](#automatic-coin-selection) (wallet is delegated to control coin selection on behalf of user)
+2. [**Manual Coin Selection**](#manual-coin-selection-aka-coin-control) (user controls coin selection)
 {% include picture.html
    image = "/assets/images/guide/glossary/coin-selection/funding-tx.jpg"
    retina = "/assets/images/guide/glossary/coin-selection/funding-tx@2x.jpg"
@@ -36,7 +36,7 @@ There are two types of coin selection strategies that are used in Bitcoin applic
    height = 400
 %}
 
-### Contraints
+### Constraints
 
 There are a few constraints that you should have in mind when considering the coin-selection strategy for your product.
 
@@ -50,7 +50,7 @@ Finally, wallet owners need to label their incoming and outgoing (change) coins.
 
 ### Optimizations
 
-Whether an automated or manual process, coin selection is important when understanding how to optimize our Bitcoin payments for either cost, speed, or privacy. Below is a breakdown of the three most common effects of coin control.
+Whether an automated or manual process, coin selection is important when understanding how to optimize our Bitcoin payments for either cost, speed, or privacy. Below is a breakdown of the three most common effects of coin selection.
 
 #### Cost
 
@@ -182,7 +182,6 @@ Freezes certain coins or clusters from their wallet’s UTXO pool to either prio
 #### When to use
 - New users or introductory level wallets
 - Wallets specifically optimizing for either cost, speed, or privacy
-- Wallets  prioritizing privacy in automatic coin selection
 
 #### When not to use
 - When privacy is a top priority to users
@@ -190,7 +189,7 @@ Freezes certain coins or clusters from their wallet’s UTXO pool to either prio
 
 #### Products that use this scheme
 {% include fact/products.html %}
-Bread Wallet, Electrum, Mycelium, BitcoinJ and Bitcoin Wallet for Android, Bitcoin Core and Hexa Wallet
+[BitcoinJ and Bitcoin Wallet for Android](https://bitcoinj.org/), [Bitcoin Core](https://bitcoin.org/en/bitcoin-core/), [Bread Wallet](https://brd.com/), [Electrum](https://electrum.org/#home), [Hexa Wallet](https://hexawallet.io/), and [Mycelium](https://wallet.mycelium.com/)
 {% include fact/close.html %}
 
 ## Manual coin selection (a.k.a coin control)
@@ -268,7 +267,6 @@ A user chooses to send a payment to one of their contacts. They enter the amount
 
 
 {% include fact/cons.html %}
-- Can be a lengthy, often confusing process (particularly for inexperienced users)
 - Inexperienced users may end up making mistakes that result in higher fees, slower transactions, or a loss of privacy
 - Can lead to dust attacks if not careful selecting sizes of UTXO inputs
 - Bad labeling of contacts and clusters can lead to sensitive information being exposed
@@ -279,23 +277,18 @@ A user chooses to send a payment to one of their contacts. They enter the amount
 #### When to use
 
 - Wallets oriented towards advanced, privacy focused bitcoiners
-- When wanting to optimise for privacy (with help of labels)
 - When wanting to give users full control of selecting transaction inputs
+- When paired with good labeling practises
 
 #### When not to use
 
 - Introductory level bitcoin wallets
-- If privacy is of no concern
 
 #### Products that use this scheme
 
 {% include fact/products.html %}
-Bitcoin Core, Wasabi, Samourai, BTCPay Server
+[Bitcoin Core](https://bitcoincore.org), [BTCPay Server](https://btcpayserver.org), [Chaincase](https://chaincase.app), [Samourai](https://samouraiwallet.com), and [Wasabi](https://wasabiwallet.io) 
 {% include fact/close.html %}
-
-### The challenge for designers
-
-The questions designers and developers face are: how much privacy do we want to bake into our wallet’s payments inherently? How do we inform wallet users of privacy risks when sending and receiving payments (if at all)?
 
 [^1]: https://coincentral.com/what-is-coin-selection-and-why-does-it-matter/
 [^2]: https://www.investopedia.com/terms/u/utxo.asp
